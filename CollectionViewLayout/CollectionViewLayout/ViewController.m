@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ImageCell.h"
+#import "LineLayout.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *images;
@@ -33,7 +34,7 @@ static NSString *const ID = @"image";
     [super viewDidLoad];
     
     CGRect rect = CGRectMake(0, 200, self.view.frame.size.width, 200);
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:[[LineLayout alloc] init]];
     collectionView.delegate = self;
     collectionView.dataSource = self;
     [collectionView registerNib:[UINib nibWithNibName:@"ImageCell" bundle:nil] forCellWithReuseIdentifier:ID];

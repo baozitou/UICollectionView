@@ -17,6 +17,7 @@
 		3BDDD0BC1CFB1E6300EDBAD6 /* CollectionViewLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDD0BB1CFB1E6300EDBAD6 /* CollectionViewLayoutUITests.m */; };
 		3BE6B11B1CFBD21100995F2D /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6B1191CFBD21100995F2D /* ImageCell.m */; };
 		3BE6B11C1CFBD21100995F2D /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE6B11A1CFBD21100995F2D /* ImageCell.xib */; };
+		3BE6B11F1CFBDA2500995F2D /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6B11E1CFBDA2500995F2D /* LineLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		3BE6B1181CFBD21100995F2D /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		3BE6B1191CFBD21100995F2D /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		3BE6B11A1CFBD21100995F2D /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		3BE6B11D1CFBDA2500995F2D /* LineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
+		3BE6B11E1CFBDA2500995F2D /* LineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				3BE6B1181CFBD21100995F2D /* ImageCell.h */,
 				3BE6B1191CFBD21100995F2D /* ImageCell.m */,
 				3BE6B11A1CFBD21100995F2D /* ImageCell.xib */,
+				3BE6B11D1CFBDA2500995F2D /* LineLayout.h */,
+				3BE6B11E1CFBDA2500995F2D /* LineLayout.m */,
 				3BDDD0961CFB1E6300EDBAD6 /* Supporting Files */,
 			);
 			path = CollectionViewLayout;
@@ -285,6 +290,7 @@
 				3BDDD09E1CFB1E6300EDBAD6 /* ViewController.m in Sources */,
 				3BE6B11B1CFBD21100995F2D /* ImageCell.m in Sources */,
 				3BDDD09B1CFB1E6300EDBAD6 /* AppDelegate.m in Sources */,
+				3BE6B11F1CFBDA2500995F2D /* LineLayout.m in Sources */,
 				3BDDD0981CFB1E6300EDBAD6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
