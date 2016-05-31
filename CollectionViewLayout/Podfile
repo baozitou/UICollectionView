@@ -1,0 +1,3 @@
+target 'CollectionViewLayout' do
+	pod 'MBProgressHUD'
+end
