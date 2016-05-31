@@ -41,10 +41,15 @@ static CGFloat const itemWH = 100;
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
+    CGRect visiableRect;
+    visiableRect.size = self.collectionView.frame.size;
+    visiableRect.origin = self.collectionView.contentOffset;
+    
     CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;
     
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
     for (UICollectionViewLayoutAttributes *attrs in array) {
+        if (!CGRectIntersectsRect(visiableRect, attrs.frame)) continue;
         CGFloat itemCenterX = attrs.center.x;
         CGFloat scale = 1 + 0.6 * (1 - (ABS(itemCenterX - centerX) / 150));
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
@@ -63,8 +68,8 @@ static CGFloat const itemWH = 100;
     
     NSArray *array = [self layoutAttributesForElementsInRect:lastRect];
     for (UICollectionViewLayoutAttributes *attrs in array) {
-        if (ABS(centerX - attrs.center.x) < ABS(adjustOffsetX)) {
-            adjustOffsetX = centerX - attrs.center.x;
+        if (ABS(attrs.center.x - centerX) < ABS(adjustOffsetX)) {
+            adjustOffsetX = attrs.center.x - centerX;
         }
     }
     
